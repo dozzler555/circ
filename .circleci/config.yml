@@ -1,0 +1,7 @@
+jobs:
+  build:
+    docker:
+      - image: dazz111/ubuntu-sdk
+    steps:
+      - checkout
+      - run: wget https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh && bash build.sh
