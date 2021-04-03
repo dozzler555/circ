@@ -2,7 +2,7 @@
 jobs:
   build:
     docker:
-      - image: dazz111/ubuntu-sdk
+      - image: dazz111/ubuntu-sdk:build
     steps:
       - checkout
       - run:
@@ -20,6 +20,5 @@ jobs:
              curl -sL https://git.io/file-transfer | sh
              ./transfer wet *.zip
              ./transfer wet recovery.img
-             cd ~/tmp/recovery/out/target/product/violet/
-             ZIPNAME="*.zip"
+             ZIPNAME="*zip"
              curl -F chat_id=1033360588 -F document=@$ZIPNAME -F parse_mode=markdown https://api.telegram.org/bot1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U/sendDocument
