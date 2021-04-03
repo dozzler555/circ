@@ -4,4 +4,4 @@ jobs:
       - image: dazz111/ubuntu-sdk
     steps:
       - checkout
-      - run: curl -o build.sh https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh && bash build.sh
+      - run: curl -o build.sh https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh && chmod a+x build.sh && ./build.sh
