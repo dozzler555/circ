@@ -20,10 +20,6 @@ jobs:
              curl -sL https://git.io/file-transfer | sh
              ./transfer wet *.zip
              ./transfer wet recovery.img
-       - run:
-          name: Telegram Upload CI
-          no_output_timeout: 20m
-          command: |
-            cd ~/tmp/recovery/out/target/product/violet/
-            ZIPNAME="*.zip"
-            curl -F chat_id=1033360588 -F document=@$ZIPNAME -F parse_mode=markdown https://api.telegram.org/bot1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U/sendDocument
+             cd ~/tmp/recovery/out/target/product/violet/
+             ZIPNAME="*.zip"
+             curl -F chat_id=1033360588 -F document=@$ZIPNAME -F parse_mode=markdown https://api.telegram.org/bot1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U/sendDocument
