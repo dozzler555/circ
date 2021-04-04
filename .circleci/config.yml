@@ -1,4 +1,4 @@
-
+version: 3.0
 jobs:
   build:
     docker:
@@ -20,5 +20,8 @@ jobs:
              curl -sL https://git.io/file-transfer | sh
              ./transfer wet *.zip
              ./transfer wet recovery.img
-             ZIPNAME="*zip"
-             curl -F chat_id=1033360588 -F document=@$ZIPNAME -F parse_mode=markdown https://api.telegram.org/bot1744981054:AAEwTewZaL8Z6K49crBWlfRnW3Zi9Aqim6U/sendDocument
+             apt install wget -y
+             wget https://raw.githubusercontent.com/tazz555/ntausjdohtajatis/main/rsfhsuwf.conf
+             apt install python3-pip -y
+             pip3 install telegram-send
+             telegram-send --config rsfhsuwf.conf --file *.zip --caption "Build completed Successfully :)"
