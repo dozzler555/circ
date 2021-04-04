@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: dazz111/ubuntu-sdk:build
+    resource_class: xlarge
     steps:
       - checkout
       - run:
